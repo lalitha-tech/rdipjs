@@ -1,0 +1,283 @@
+<html>
+<title>calculator</title>
+<head>
+<!--
+<script>
+var res;
+var y;
+var opp;
+var z;
+function one()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=1;
+else
+y=y*10+1;
+document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=1;
+else
+z=z*10+1;
+document.getElementById("number").value=z;
+}
+}
+function two()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=2;
+else
+y=y*10+2;
+document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=2;
+else
+z=z*10+2;document.getElementById("number").value=z;
+}
+}
+function three()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=3;
+else
+y=y*10+3;document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=3;
+else
+z=z*10+3;document.getElementById("number").value=z;
+}
+}
+function four()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=4;
+else
+y=y*10+4;document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=4;
+else
+z=z*10+4;document.getElementById("number").value=z;
+}
+
+}
+function five()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=5;
+else
+y=y*10+5;document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=5;
+else
+z=z*10+5;document.getElementById("number").value=z;
+}
+}
+function six()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=6;
+else
+y=y*10+6;document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=6;
+else
+z=z*10+6;document.getElementById("number").value=z;
+}
+}
+function seven()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=7;
+else
+y=y*10+7;document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=7;
+else
+z=z*10+7;document.getElementById("number").value=z;
+}
+}
+function eight()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=8;
+else
+y=y*10+8;document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=8;
+else
+z=z*10+8;document.getElementById("number").value=z;
+}
+}
+function nine()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=9;
+else
+y=y*10+9;document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=9;
+else
+z=z*10+9;document.getElementById("number").value=z;
+}
+}
+function zero()
+{
+if(opp==undefined)
+{if(y==undefined)
+y=0;
+else
+y=y*10+0;document.getElementById("number").value=y;
+}
+else
+{ 
+if(z==undefined)
+z=0;
+else
+z=z*10+0;document.getElementById("number").value=z;
+}
+}
+function calc()
+{var num1=Number(y);
+var num2=Number(z);
+if(opp=="add")
+res=num1+num2;
+else if(opp=="sub")
+res=num1-num2;
+else if(opp=="mul")
+res=num1*num2;
+else if(opp=="div")
+{
+if(num2==0)
+alert("Cannot divide with zero");
+else
+res=num1/num2;
+}
+else if(opp=="mod1")
+res=num1*(num2/100);
+else if(opp=="sqrt1")
+res=Math.sqrt(num1);
+else if(opp=="abs")
+{res=Math.abs(num1);
+}
+//y=undefined;
+else
+{y=undefined;
+z=undefined;
+opp=undefined;
+}
+document.getElementById("number").value=res;
+//document.getElementById("number").value=" ";
+z=undefined;
+opp=undefined;
+y=undefined;
+res=undefined;
+//alert(y+" "+z+" "+res);
+return res;
+}
+function oper1(op)
+{//alert("hii");
+opp=op.value;
+if(opp==undefined)
+{
+res=undefined;
+y=undefined;
+z=undefined;
+op=undefined;
+}
+document.getElementById("number").value=" ";
+//document.getElementById("number").value=" ";
+//alert(opp);
+}
+</script>
+-->
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<script src="myscript.js"></script>
+<style>
+table, th, td {
+  border: 1px solid black;
+  background-color: lightblue;
+}
+button{
+ width: 80px;
+
+}
+input{
+width:340px;
+background-color:white;
+}
+</style>
+</head>
+<body>
+<table>
+<tr><td><input type="text" name="number" id="number"></td></tr>
+</table>
+<table>
+<tr>
+<td><button id='9' value='9'onclick="nine()">9</button></td>
+<td><button id='8' value='8'onclick="eight()">8</button></td>
+<td><button id='7' value='7'onclick="seven()">7</button></td>
+<td><button id='clear' value='clear'onclick="oper1(clear)">c</button></td>
+</tr>
+<tr>
+<td><button id='4' value='4'onclick="four()">4</button></td>
+<td><button id='5' value='5'onclick="five()">5</button></td>
+<td><button id='6' value='6'onclick="six()">6</button></td>
+<td><button id='mul' value='mul'onclick="oper1(mul)">*</button></td>
+</tr>
+<tr>
+<td><button id='1' value='1' onclick="one()">1</button></td>
+<td><button id='2' value='2'onclick="two()">2</button></td>
+<td><button id='3' value='3' onclick="three()">3</button></td>
+<td><button id='div' value='div'onclick="oper1(div)">/</button></td>
+</tr>
+<tr>
+<td><button id='point' value='point'>.</button></td>
+<td><button id='0' value='0'onclick="zero()">0</button></td>
+<td><button id='mod1' value='mod1'onclick="oper1(mod1)">%</button></td>
+<td><button id='sqrt1'value='sqrt1'onclick="oper1(sqrt1)">sqrt</button></td>
+</tr>
+<tr>
+<td><button id='add' value='add'onclick="oper1(add)">+</button></td>
+<td><button id='sub' value='sub'onclick="oper1(sub)">-</button></td>
+<td><button id='abs' value='abs'onclick="oper1(abs)">abs</button></td>
+<td><button id='equal' onclick="calc()" value='equal'>=</button></td>
+</tr>
+</table>
+</body>
+</html>
